@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo Blog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="outer">
-        <div class="container c1">
-            <div class="heading"></div>
-            <div class="content"></div>
-        </div>
-        <div class="container c2">
-            <div class="heading"></div>
-            <div class="content"></div>
-        </div>
-        <div class="container c3">
-            <div class="heading"></div>
-            <div class="content"></div>
+        <div class="outer-container">
+            <div class="container c1">
+                <div class="heading"></div>
+                <div class="content"></div>
+            </div>
+            <div class="container c2">
+                <div class="heading"></div>
+                <div class="content"></div>
+            </div>
+            <div class="container c3">
+                <div class="heading"></div>
+                <div class="content"></div>
+            </div>
         </div>
     </div>
-    
     <script>
 
-        fetch("https://script.google.com/macros/s/AKfycbzHyn-cc57UYmpSm0wWPCUK44HBV3yUZ3xxuliO54JyIEHUg1CQ1SZdbEzdvbJZiv0p/exec")
+        const outer = document.querySelector(".outer-container");
+        const children = outer.childNodes;
+        console.log(children);
 
+        fetch("https://script.google.com/macros/s/AKfycbzHyn-cc57UYmpSm0wWPCUK44HBV3yUZ3xxuliO54JyIEHUg1CQ1SZdbEzdvbJZiv0p/exec")
+            .then(res => res.json())
+            .then(data => {
+
+                document.querySelector(".c1 .heading").innerHTML = data.content[1][0];
+                document.querySelector(".c1 .content").innerHTML = data.content[1][1];
+
+                document.querySelector(".c2 .heading").innerHTML = data.content[2][0];
+                document.querySelector(".c2 .content").innerHTML = data.content[2][1];
+
+                document.querySelector(".c3 .heading").innerHTML = data.content[3][0];
+                document.querySelector(".c3 .content").innerHTML = data.content[3][1];
+            });
     </script>
 </body>
+
 </html>
