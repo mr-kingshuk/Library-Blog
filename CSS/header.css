@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -35,6 +36,10 @@ header .title{
     padding-bottom: 10px;
     font-size: 20px;
     width: 90%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
 }
 
 @media only screen and (max-width: 740px){
