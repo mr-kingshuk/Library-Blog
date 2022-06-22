@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS Files  -->
+    <link rel="stylesheet" href="CSS/footer.css">
 </head>
 
 <body>
@@ -23,9 +26,10 @@
     <main>
 
     </main>
-    <footer>
+    <footer class="footer">
         <div class="information">
             <div class="contact">
+                <div class="header">Contact</div>
                 <div class="member">
                     <div class="name">Prof. Ranjan Gangopadhyay</div>
                     <div class="position">(Lead)</div>
@@ -37,7 +41,13 @@
                     <div class="email">nikhil.sharma@lnmiit.ac.in</div>
                 </div>
             </div>
+            <div class="newsletter">
+                <label class = "header" for="fname">Sign-up for <br> Monthly Newsletter</label>
+                <input type="text" class = "field" id="fname" name="fname" placeholder="Your Email Address">
+                <button>Subscribe</button>
+            </div>
             <div class="editorial-team">
+                <div class="header">Editorial</div>
                 <div class="member">
                     <div class="name">Mr. Giridhar M Kunkur</div>
                     <div class="position">(Librarian)</div>
@@ -54,11 +64,6 @@
                     <div class="email">vijay.kumar@lnmiit.ac.in</div>
                 </div>
             </div>
-            <div class="newsletter">
-                <label class = "header" for="fname">Sign-up for Monthly Newsletter</label>
-                <input type="text" class = "field" id="fname" name="fname">
-                <button>Subscribe</button>
-            </div>
         </div>
         <hr>
         <div class="socials">
@@ -74,7 +79,6 @@
             <div class="footer-icons">
                 <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </div>
-            <!-- <p>All Rights Reserved.</p> -->
         </div>
     </footer>
 </body>
