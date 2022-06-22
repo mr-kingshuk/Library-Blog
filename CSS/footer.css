@@ -98,11 +98,41 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     margin: 10px 0; 
 }
 
 .footer .socials .footer-icons a{
     color: white;
     font-size: 20px;
+}
+
+.footer .socials .footer-icons a:hover{
+    color: lightgrey;
+}
+
+@media only screen and (max-width: 740px){
+    .footer .information{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer .information .editorial-team,
+    .footer .information .contact{
+        text-align: center;
+    }
+
+    .footer .information .editorial-team{
+        padding-bottom: 10px;
+    }
+
+    .footer .information .newsletter{
+        margin-bottom: 35px;
+    }
+
+    .footer .information .newsletter .field{
+        width: 80%;
+        margin: auto;
+    }
 }
