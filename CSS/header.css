@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #2F6B96;
+   padding: 25px 3% 2px 3%;
+}
+
+header .images{
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px; 
+}
+
+header .images .logo{
+
+    height: 100%;
+}
+
+header .images .logo img{
+    height: 100%;
+}
+
+header .images .lnmiit img{
+    height: 75%;
+}
+
+header .title{
+    color: white;
+    padding-bottom: 10px;
+    font-size: 20px;
+    width: 90%;
+}
+
+@media only screen and (max-width: 740px){
+    header .title{
+        font-size: 15px;
+        width: 100%;
+        padding-bottom: 14px;
+    }
+    header{
+       padding: 25px 5% 2px 5%;
+    }
+    header .images .logo{
+
+        height: 90%;
+    }
+}

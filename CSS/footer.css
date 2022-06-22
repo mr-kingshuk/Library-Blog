@@ -22,8 +22,8 @@
     text-align: right;
 }
 
-.footer .information .header,
-.footer .information .header{
+.footer .information .title,
+.footer .information .title{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -56,7 +56,7 @@
     text-align: center;
 }
 
-.footer .information .newsletter .header{
+.footer .information .newsletter .title{
     display: block;
 }
 
@@ -135,4 +135,7 @@ hr{
         width: 80%;
         margin: auto;
     }
+    .footer{
+        padding: 25px 5% 2px 5%;
+     }
 }
