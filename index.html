@@ -5,47 +5,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Blog</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Library Blog</title>
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="outer">
-        <div class="outer-container">
-            <div class="container c1">
-                <div class="heading"></div>
-                <div class="content"></div>
+    <header>
+
+    </header>
+    <nav>
+
+    </nav>
+    <main>
+
+    </main>
+    <footer>
+        <div class="information">
+            <div class="contact">
+                <div class="member">
+                    <div class="name">Prof. Ranjan Gangopadhyay</div>
+                    <div class="position">(Lead)</div>
+                    <div class="email">ranjan@lnmiit.ac.in</div>
+                </div>
+                <div class="member">
+                    <div class="name">Dr. Nikhil Sharma</div>
+                    <div class="position">(Co-Lead)</div>
+                    <div class="email">nikhil.sharma@lnmiit.ac.in</div>
+                </div>
             </div>
-            <div class="container c2">
-                <div class="heading"></div>
-                <div class="content"></div>
+            <div class="editorial-team">
+                <div class="member">
+                    <div class="name">Mr. Giridhar M Kunkur</div>
+                    <div class="position">(Librarian)</div>
+                    <div class="email">librarian@lnmiit.ac.in</div>
+                </div>
+                <div class="member">
+                    <div class="name">Mr. Aditya Sengar</div>
+                    <div class="position">(Member)</div>
+                    <div class="email">16pec001@lnmiit.ac.in</div>
+                </div>
+                <div class="member">
+                    <div class="name">Mr. Vijay Kumar</div>
+                    <div class="position">(Member)</div>
+                    <div class="email">vijay.kumar@lnmiit.ac.in</div>
+                </div>
             </div>
-            <div class="container c3">
-                <div class="heading"></div>
-                <div class="content"></div>
+            <div class="newsletter">
+                <label class = "header" for="fname">Sign-up for Monthly Newsletter</label>
+                <input type="text" class = "field" id="fname" name="fname">
+                <button>Subscribe</button>
             </div>
         </div>
-    </div>
-    <script>
-
-        const outer = document.querySelector(".outer-container");
-        const children = outer.childNodes;
-        console.log(children);
-
-        fetch("https://script.google.com/macros/s/AKfycbzHyn-cc57UYmpSm0wWPCUK44HBV3yUZ3xxuliO54JyIEHUg1CQ1SZdbEzdvbJZiv0p/exec")
-            .then(res => res.json())
-            .then(data => {
-
-                document.querySelector(".c1 .heading").innerHTML = data.content[1][0];
-                document.querySelector(".c1 .content").innerHTML = data.content[1][1];
-
-                document.querySelector(".c2 .heading").innerHTML = data.content[2][0];
-                document.querySelector(".c2 .content").innerHTML = data.content[2][1];
-
-                document.querySelector(".c3 .heading").innerHTML = data.content[3][0];
-                document.querySelector(".c3 .content").innerHTML = data.content[3][1];
-            });
-    </script>
+        <hr>
+        <div class="socials">
+            <div class="footer-icons">
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
+            </div>
+            <div class="footer-icons">
+                <a href="#" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
+            </div>
+            <div class="footer-icons">
+                <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="footer-icons">
+                <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <!-- <p>All Rights Reserved.</p> -->
+        </div>
+    </footer>
 </body>
 
 </html>
