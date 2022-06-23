@@ -6,7 +6,6 @@
 }
 
 nav{
-    border: 2px solid black;
     padding: 15px 3% 10px 3%;
     display: flex;
     justify-content: flex-start;
