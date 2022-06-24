@@ -7,30 +7,33 @@ fetch("https://script.google.com/macros/s/AKfycbytz042kTz7jER3XLGRwtIDiO2UCkjgJX
     .then(res => res.json())
     .then(data => {
 
+        var characters = 500;
         ritem3.querySelector(".title").innerHTML = data.content[1][0];
         ritem3.querySelector(".desc").innerHTML = data.content[1][1];
         ritem3.querySelector(".link").href = data.content[1][2];
-        clipText(ritem3.querySelector(".desc"),200);
+        clipText(ritem3.querySelector(".desc"), characters);
 
         ritem4.querySelector(".title").innerHTML = data.content[2][0];
         ritem4.querySelector(".desc").innerHTML = data.content[2][1];
         ritem4.querySelector(".link").href = data.content[2][2];
-        clipText(ritem4.querySelector(".desc"),200);
+        clipText(ritem4.querySelector(".desc"), characters);
         
     });
 
 fetch("https://script.google.com/macros/s/AKfycbxIktXPeNzLwGlHOAUghu0DFe4bLARP9SR7Mg-Au1_3XCzbzvcJT-X_f1CE252tSfeX/exec")
     .then(res => res.json())
     .then(data => {
+
+        var characters = 500;
         hitem1.querySelector(".title").innerHTML = data.content[1][0];
         hitem1.querySelector(".desc").innerHTML = data.content[1][1];
         hitem1.querySelector(".link").href = data.content[1][2];
-        clipText(hitem1.querySelector(".desc"),200);
+        clipText(hitem1.querySelector(".desc"), characters);
 
         hitem2.querySelector(".title").innerHTML = data.content[2][0];
         hitem2.querySelector(".desc").innerHTML = data.content[2][1];
         hitem2.querySelector(".link").href = data.content[1][2];
-        clipText(hitem2.querySelector(".desc"),200);
+        clipText(hitem2.querySelector(".desc"),characters);
         
     });    
 

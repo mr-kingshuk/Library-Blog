@@ -19,6 +19,11 @@
     display: flex;
     /* border: 2px solid black; */
     margin: 20px 0; 
+    gap: 10%;
+}
+
+.intro .info{
+    width: 65%;
 }
 
 .intro .info .header{
@@ -41,7 +46,8 @@
 }
 
 .intro .image{
-    width: 200%;
+    width: 30%;
+    /* border: 2px solid black; */
 }
 
 .intro .image img{
@@ -66,5 +72,14 @@
     }
     .intro .info{
         padding: 0 ;
+    }
+
+    .intro .info{
+        width: 95%;
+    }
+
+    .intro .info .header,
+    .intro .info .content{
+        text-align: center
     }
 }

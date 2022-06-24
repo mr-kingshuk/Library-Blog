@@ -63,6 +63,10 @@
 }
 
 @media only screen and (max-width: 650px){
+    .section{
+        width: 95%;
+        margin: auto;
+    }
     .section .content{
         flex-direction: column;
     }
@@ -77,5 +81,8 @@
         margin: 10px 0;
     }
     
+    .section .content .items .link{
+        padding-right: 0;
+    }
 
 }
