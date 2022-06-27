@@ -26,10 +26,12 @@
     display: flex;
     margin: 15px 0;
     gap: 25px;
+    flex-wrap: wrap;
 }
 
 .section .content .items{
-    width: 50%;
+    width: calc(50% - 15px);
+    margin: 25px 0;
 }
 
 .section .content .items .title{
