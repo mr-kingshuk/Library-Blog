@@ -36,13 +36,13 @@
         </div>
     </header>
     <nav>
-        <div class="items active">
+        <div class="items">
             <a href="../index.html">Home</a>
         </div>
         <div class="items ">
             <a href="./features.html">Features</a>
         </div>
-        <div class="items">
+        <div class="items active">
             <a href="./focus.html">Focus</a>
         </div>
         <div class="items ">
@@ -65,11 +65,33 @@
             <div class="content ">
                 <div class="items i1">
                     <div class="title"></div>
+                    <div class="img">
+                        <img src="#" alt="image">
+                    </div>
                     <div class="desc"></div>
                     <a class="link" target="_blank" href="#">...Continue Reading</a>
                 </div>
                 <div class="items i2">
                     <div class="title"></div>
+                    <div class="img">
+                        <img src="#" alt="image">
+                    </div>
+                    <div class="desc"></div>
+                    <a class="link" target="_blank" href="#">...Continue Reading</a>
+                </div>
+                <div class="items i3">
+                    <div class="title"></div>
+                    <div class="img">
+                        <img src="#" alt="image">
+                    </div>
+                    <div class="desc"></div>
+                    <a class="link" target="_blank" href="#">...Continue Reading</a>
+                </div>
+                <div class="items i4">
+                    <div class="title"></div>
+                    <div class="img">
+                        <img src="#" alt="image">
+                    </div>
                     <div class="desc"></div>
                     <a class="link" target="_blank" href="#">...Continue Reading</a>
                 </div>
@@ -132,7 +154,35 @@
         </div>
     </footer>
 
-    <script src="../JS/script.js"></script>
+    <script>
+        fetch("https://script.google.com/macros/s/AKfycbwV-4FZUX5NsEq9gqDiRLq-hp6b_waCcrH5qNXEJESsTAHt5hkruAzzyjmSQkxCPx38/exec")
+            .then(res => res.json())
+            .then(data => {
+
+                var characters = 250;
+                addData(data,1,characters);
+                addData(data,2,characters);
+                addData(data,3,characters);
+                addData(data,4,characters);
+
+            });
+
+        function addData(data, number,characters){
+            const item = document.querySelector('.i'+number);
+            item.querySelector(".title").innerHTML = data.content[number][0];
+            item.querySelector(".desc").innerHTML = data.content[number][1];
+            const imageLink = "https://docs.google.com/uc?id="+ data.content[number][2].substring(32,data.content[number][2].indexOf("/view?usp=sharing"));
+            item.querySelector(".img img").src = imageLink;
+            item.querySelector(".link").href = data.content[number][3];
+            clipText(item.querySelector(".desc"), characters);
+        }    
+
+        function clipText(div, length) {
+            var i;
+            div.innerHTML = div.innerHTML.substring(0, length) + "...";
+
+        }    
+    </script>
 </body>
 
 </html>

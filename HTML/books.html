@@ -36,7 +36,7 @@
         </div>
     </header>
     <nav>
-        <div class="items active">
+        <div class="items">
             <a href="../index.html">Home</a>
         </div>
         <div class="items ">
@@ -51,7 +51,7 @@
         <div class="items">
             <a href="./news.html">News & Events</a>
         </div>
-        <div class="items">
+        <div class="items active">
             <a href="./books.html">Books</a>
         </div>
         <div class="items"> 
@@ -132,7 +132,33 @@
         </div>
     </footer>
 
-    <script src="../JS/script.js"></script>
+    <script>
+        fetch("https://script.google.com/macros/s/AKfycbzKVvHcz2yAjn3tR7Ln4tawz8wkPZaPsOsERrQPrAPZBmapTDIkWSw5AnqDgIyMccI6/exec")
+            .then(res => res.json())
+            .then(data => {
+
+                var characters = 500;
+                addData(data,1,characters);
+                addData(data,2,characters);
+                addData(data,3,characters);
+                addData(data,4,characters);
+
+            });
+
+        function addData(data, number,characters){
+            const item = document.querySelector('.i'+number);
+            item.querySelector(".title").innerHTML = data.content[number][0];
+            item.querySelector(".desc").innerHTML = data.content[number][1];
+            item.querySelector(".link").href = data.content[number][2];
+            clipText(item.querySelector(".desc"), characters);
+        }    
+
+        function clipText(div, length) {
+            var i;
+            div.innerHTML = div.innerHTML.substring(0, length) + "...";
+
+        }    
+    </script>
 </body>
 
 </html>
