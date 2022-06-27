@@ -14,7 +14,7 @@ nav{
 
 nav .items{
     padding: 5px  12px;
-    border-top: 4.5px solid grey;
+    border-top: 5px solid grey;
     cursor: pointer;
 }
 
@@ -30,6 +30,10 @@ nav .items a{
 nav .active,
 nav .items:hover {
     border-top-color: #2F6B96;
+}
+
+nav .active a,
+nav .items:hover a{
     font-weight: 800;
 }
 @media only screen and (max-width: 740px){
