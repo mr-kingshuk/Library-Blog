@@ -110,6 +110,11 @@
     object-position: left top;
 }
 
+.section .content .book .img img{
+    object-fit: cover;
+    object-position: center;
+}
+
 
 @media only screen and (max-width: 650px){
     .section{
