@@ -41,9 +41,9 @@ nav .items:hover a{
        padding: 15px 5% 10px 5% ;
     }
     nav .items{
-        padding: 1px 6px;
+        padding: 1px 4px;
     }
     nav .items a{
-        font-size: 7px;
+        font-size: 8px;
     }
 }
