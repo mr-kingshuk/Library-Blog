@@ -12,7 +12,7 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="shortcut icon" href="Images/other-logo-favicon.png" type="image/x-icon">    
+    <link rel="shortcut icon" href="Images/other-logo-favicon.png" type="image/x-icon">
 
     <!-- CSS Files  -->
     <link rel="stylesheet" href="CSS/footer.css">
@@ -23,7 +23,21 @@
 </head>
 
 <body>
-    <header >
+    <div class="preloader">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="25 25 50 50">
+            <circle cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke="#45d6b5" stroke-linecap="round"
+                stroke-dashoffset="0" stroke-dasharray="100, 200">
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50"
+                    to="360 50 50" dur="2.5s" repeatCount="indefinite" />
+                <animate attributeName="stroke-dashoffset" values="0;-30;-124" dur="1.25s" repeatCount="indefinite" />
+                <animate attributeName="stroke-dasharray" values="0,200;110,200;110,200" dur="1.25s"
+                    repeatCount="indefinite" />
+            </circle>
+        </svg>
+    </div>
+
+    <header>
         <div class="images">
             <div class="logo lnmiit"> <img src="Images/lnmiit-logo.png">
             </div>
@@ -46,7 +60,7 @@
             <a href="HTML/focus.html">Focus</a>
         </div>
         <div class="items ">
-            <a href="HTML/highlights.html">Highlights</a> 
+            <a href="HTML/highlights.html">Highlights</a>
         </div>
         <div class="items">
             <a href="HTML/news.html">News & Events</a>
@@ -54,18 +68,26 @@
         <div class="items">
             <a href="HTML/books.html">Books</a>
         </div>
-        <div class="items"> 
-            <a href="HTML/research.html">Research Resources</a> 
+        <div class="items">
+            <a href="HTML/research.html">Research Resources</a>
         </div>
     </nav>
-    <main class = "main">
+    <main class="main">
         <div class="intro">
             <div class="info">
                 <div class="header">
-                    Welcome to the newly formed Centre for Next Generation Communication and Networking (C-NGCN) in the Department of Electronics and Communication Engineering at The LNM Institute of Information Technology, Jaipur.
+                    Welcome to the newly formed Centre for Next Generation Communication and Networking (C-NGCN) in the
+                    Department of Electronics and Communication Engineering at The LNM Institute of Information
+                    Technology, Jaipur.
                 </div>
                 <div class="content">
-                    For over a decade, the department emphasizes its undergraduate program and later the postgraduate program started with specializations in Mobile communication, VLSI and embedded system. Currently, there is a worldwide interest in 5G/ 6G wireless technologies. In tune with this trend, there is a strong feeling at the department to create a centre for next generation communication and networking. This will accelerate the research enthusiasm among the faculty as well as create a considerable momentum through team ship and dedicated approach for facing the challenges in the new horizon of next generation wireless research.
+                    For over a decade, the department emphasizes its undergraduate program and later the postgraduate
+                    program started with specializations in Mobile communication, VLSI and embedded system. Currently,
+                    there is a worldwide interest in 5G/ 6G wireless technologies. In tune with this trend, there is a
+                    strong feeling at the department to create a centre for next generation communication and
+                    networking. This will accelerate the research enthusiasm among the faculty as well as create a
+                    considerable momentum through team ship and dedicated approach for facing the challenges in the new
+                    horizon of next generation wireless research.
                 </div>
             </div>
             <div class="image">
@@ -121,8 +143,8 @@
                 </div>
             </div>
             <div class="newsletter">
-                <label class = "title" for="fname">Sign-up for <br> Monthly Newsletter</label>
-                <input type="text" class = "field" id="fname" name="fname" placeholder="Your Email Address">
+                <label class="title" for="fname">Sign-up for <br> Monthly Newsletter</label>
+                <input type="text" class="field" id="fname" name="fname" placeholder="Your Email Address">
                 <button>Subscribe</button>
             </div>
             <div class="editorial-team">
@@ -162,6 +184,7 @@
     </footer>
 
     <script src="JS/script.js"></script>
+    <script src="JS/preloader.js"></script>
 </body>
 
 </html>
