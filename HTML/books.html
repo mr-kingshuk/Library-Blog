@@ -76,15 +76,33 @@
             <div class="header">Books</div>
             <hr>
             <div class="content ">
-                <div class="items i1">
+                <div class="book i1">
                     <div class="title"></div>
-                    <div class="desc"></div>
-                    <a class="link" target="_blank" href="#">...Continue Reading</a>
+                    <div class="author"></div>
+                    <div class="img">
+                        <img src="#" alt="book cover">
+                    </div>
                 </div>
-                <div class="items i2">
+                <div class="book i2">
                     <div class="title"></div>
-                    <div class="desc"></div>
-                    <a class="link" target="_blank" href="#">...Continue Reading</a>
+                    <div class="author"></div>
+                    <div class="img">
+                        <img src="#" alt="book cover">
+                    </div>
+                </div>
+                <div class="book i3">
+                    <div class="title"></div>
+                    <div class="author"></div>
+                    <div class="img">
+                        <img src="#" alt="book cover">
+                    </div>
+                </div>
+                <div class="book i4">
+                    <div class="title"></div>
+                    <div class="author"></div>
+                    <div class="img">
+                        <img src="#" alt="book cover">
+                    </div>
                 </div>
             </div>
         </div>
@@ -161,15 +179,9 @@
         function addData(data, number,characters){
             const item = document.querySelector('.i'+number);
             item.querySelector(".title").innerHTML = data.content[number][0];
-            item.querySelector(".desc").innerHTML = data.content[number][1];
-            item.querySelector(".link").href = data.content[number][2];
-            clipText(item.querySelector(".desc"), characters);
-        }    
-
-        function clipText(div, length) {
-            var i;
-            div.innerHTML = div.innerHTML.substring(0, length) + "...";
-
+            item.querySelector(".author").innerHTML = "-"+ data.content[number][1];
+            const imageLink = "https://docs.google.com/uc?id="+ data.content[number][2].substring(32,data.content[number][2].indexOf("/view?usp=sharing"));
+            item.querySelector(".img img").src = imageLink;
         }    
     </script>
     <script src="../JS/preloader.js"></script>

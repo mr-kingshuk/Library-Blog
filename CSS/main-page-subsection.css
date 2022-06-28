@@ -22,7 +22,6 @@
 }
 
 .section .content{
-
     display: flex;
     margin: 15px 0;
     gap: 25px;
@@ -34,7 +33,38 @@
     margin: 25px 0;
 }
 
-.section .content .items .title{
+.section .content .book{
+    width: calc( 24% - 10px);
+}
+
+.section .content .book .title
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+
+    color: #292929;
+}
+
+.section .content .book .author{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+    color: #292929;
+    padding: 5px 20px;
+}
+
+.section .content .book .img{
+    width: 90%;
+    margin-top: 20px;
+    aspect-ratio: 1/1.5;
+}
+
+.section .content .items .title
+{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -45,7 +75,8 @@
     min-height: 60px;
 }
 
-.section .content .items .desc{
+.section .content .items .desc
+{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -71,10 +102,12 @@
     aspect-ratio:2/1;
 }
 
-.section .content .items img{
+.section .content .items img,
+.section .content .book .img img{
     width: 100%;
     height: 100%;
     object-fit: contain;
+    object-position: left top;
 }
 
 
@@ -99,6 +132,15 @@
     
     .section .content .items .link{
         padding-right: 0;
+    }
+
+    .section .content .book{
+        width: 100%;
+        margin: auto;
+    }
+    
+    .section .content .book .img{
+        margin: auto;
     }
 
 }
